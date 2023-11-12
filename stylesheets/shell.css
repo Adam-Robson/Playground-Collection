@@ -1,0 +1,146 @@
+#gray-cup-guy::after {
+  src: url('./assets/graycupguy.png')
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #d3e5e5;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(106, 151, 175);
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  border: 5px solid rgb(87, 70, 85);
+  height: auto;
+}
+
+header {
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background-color: rgb(194, 217, 224);
+  border: 2px solid slategray;
+  margin: 5px;
+}
+
+.home {
+  margin: 1rem 0 0 3rem;
+  text-decoration: none;
+  color: #140440
+}
+
+a:hover {
+  color: indianred;
+}
+
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: bisque;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 3px 3px 1px rgb(251, 114, 29);
+}
+
+.link {
+  position: relative;
+  right: 3rem;
+  color: slategray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main {
+  display: block;
+}
+
+.cups-and-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  background-color: white;
+}
+
+.three-cups {
+  display: flex;
+  padding: 0px;
+}
+
+.three-buttons {
+  display: flex;
+  justify-content: right;
+  align-items: bottom;
+  flex-direction: row;
+  margin-top: 1em;
+  margin-left: 5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(241, 207, 196);
+  color: rgb(87, 70, 85);
+  margin-bottom: 5px;
+
+}
+
+main {
+  margin-top: 2em;
+  padding: 20px;
+  border: 3px solid peachpuff;
+  background-color: darkgoldenrod;
+}
+
+footer {
+  bottom: 0;
+  padding: 7px 20px;
+  font-size: .8em;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--footer-background);
+}
+
+#button-one {
+  display: flex;
+}
+
+#button-two {
+  display: flex;
+}
+
+#button-three {
+  display: flex;
+}
+
+#graycup {
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+}
+
+.guesses {
+  display: flex;
+  justify-content: center;
+  color: rgb(77, 65, 87);
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#reset-button {
+  margin-top: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(241, 207, 196);
+  color: rgb(87, 70, 85);
+}
+
+#start-over {
+  display: block;
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(241, 207, 196);
+  color: rgb(87, 70, 85);
+}

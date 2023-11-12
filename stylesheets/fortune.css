@@ -1,0 +1,117 @@
+:root {
+  /* CSS HSL */
+  --tint: hsla(202, 42%, 86%, 1);
+  --onyx: hsla(23, 6%, 26%, 1);
+  --cornsilk: hsla(50, 73%, 90%, 1);
+  --green: hsla(164, 11%, 41%, 1);
+  --orange: hsla(6, 57%, 47%, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  max-height: 100vh;
+}
+
+
+html,
+body {
+  background-color: var(--tint);
+  color: var(--onyx);
+  font-family: 'Inconsolata', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+a {
+  color: var(--onyx);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+.home {
+  margin: 2rem;
+  position: relative;
+  top: 4rem;
+}
+
+.h1 {
+  grid-area: 1 / 1 / 2 / 4;
+  font-size: 2em;
+  text-align: right;
+  padding: .5em;
+  margin-bottom: 6rem;
+}
+
+.main {
+  grid-area: 2 / 1 / 3 / 4;
+  height: 100%;
+  width: 100%;
+}
+
+.question-input {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input {
+  margin: 2em 0 2em 0;
+}
+
+#show-question {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.question-button {
+  width: 3em;
+  background-color: var(--green);
+  color: var(--cornsilk);
+  padding: .15rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#answer-section {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--onyx);
+}
+
+#image {
+  margin-top: 2em;
+}
+
+#reset {
+  margin-left: 10em;
+  background-color: var(--green);
+  color: var(--cornsilk);
+  padding: .25rem;
+}
+
+
+.cat {
+  padding: 4rem;
+  height: 20em;
+}
+
+.error {
+  color: var(--orange);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/reset.css" />
+  <link rel="stylesheet" href="../styles/shell.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <title>playground | shell</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="home">home</a>
+      <h1>which cup is hiding something?</h1>
+    </header>
+    <main>
+      <section class="cups-and-buttons">
+        <div>
+          <img id="cup-one" class="three-cups" src="../assets/graycup.png" alt="gray cup">
+          <button id="button-one" class="three-buttons">
+            cup 1
+          </button>
+        </div>
+        <div>
+          <img id="cup-two" class="three-cups" src="../assets/graycup.png" alt="gray cup">
+          <button id="button-two" class="three-buttons">
+            cup 2
+          </button>
+        </div>
+        <div>
+          <img id="cup-three" class="three-cups" src="../assets/graycup.png" alt="gray cup">
+          <button id="button-three" class="three-buttons">
+            cup 3
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="guesses">
+          Correct guesses:<span id="correct-guesses"></span>
+        </div>
+        <div class="guesses">
+          Incorrect guesses: <span id="incorrect-guesses"></span>
+        </div>
+        <div class="guesses">
+          Total guesses:<span id="total-guesses"></span>
+        </div>
+        <button id="reset-button" type="button">reset</button>
+        <button id="start-over" type="button">start over</button>
+      </section>
+    </main>
+
+    <footer>&copy;2022 Student Developer Alchemy Code Lab</footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+
+</html>

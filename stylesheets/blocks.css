@@ -1,0 +1,35 @@
+* {
+  padding: 2.5em;
+  margin: 0;
+}
+
+canvas {
+  background: #dfbaba;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  color: darkslategray;
+  text-decoration: none;
+  position: relative;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.home {
+  margin: 1rem 0 0 3rem;
+  text-decoration: none;
+  color: var(#140440);
+
+}
+
+a:hover {
+  color: indianred;
+}

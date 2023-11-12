@@ -1,0 +1,91 @@
+:root {
+  --background: rgb(249, 231, 231);
+  --foreground: rgb(55, 67, 88);
+  --accent: rgb(166, 65, 56);
+  --rivals: rgb(153, 232, 211);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Rubik', 'Titillium', san-serif;
+  background: var(--background);
+  display: grid;
+  grid-template-areas:
+    "a a a a a"
+    "b b b b b"
+    "c c d d d"
+    "e e e e e";
+  color: var(--foreground);
+}
+
+header {
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--foreground);
+
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2;
+}
+
+.game-stats {
+  width: 100vw;
+  grid-area: b;
+  display: grid;
+  grid-template-areas:
+    "f g";
+  grid-template-columns: 1fr 1fr;
+}
+
+.rivals-stats {
+  grid-area: f;
+  text-align: center;
+}
+
+.player-stats {
+  grid-area: g;
+  text-align: center;
+}
+
+.images {
+  display: grid;
+  grid-template-areas:
+    "a b";
+
+}
+
+.all-rivals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+#more-button {
+  width: fit-content;
+  height: fit-content;
+}
+
+.rival {
+  border: 2px solid var(--accent);
+  background-color: var(--rivals);
+  display: flex;
+  justify-content: space-around;
+  height: 6em;
+  margin: 1rem;
+}
+
+.game-over {
+  transform: rotate(90deg);
+}
+
+.home {
+  position: relative;
+  right: 40rem;
+  text-decoration: none;
+}

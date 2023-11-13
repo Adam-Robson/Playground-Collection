@@ -1,0 +1,67 @@
+:root {
+  --onyx: #444140;
+  --payne: #5c6b73;
+  --walnut: #726953;
+  --battle: #818479;
+  --rose: #cd8987;
+  --slate: #93a29b;
+  --dogwood: #cdaca1;
+  --light: #b5cbb7;
+  --mint: #ccfbfe;
+  --ash: #cfd7c7;
+  --french: #cdd6dd;
+  --cyan: #e0fbfc;
+}
+
+html,
+body {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 300;
+  background-color: var(--battle);
+  color: var(--cyan);
+}
+
+header {
+  margin: 1.4rem;
+}
+
+nav {
+  margin: 2rem 0 2rem 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  font-size: 1.9rem;
+}
+
+a {
+  color: var(--ash);
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--french);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.img {
+  position: relative;
+  top: 3.1rem;
+  right: 8rem;
+}
+
+.title {
+  font-size: 6.3rem;
+  text-align: center;
+  color: var(--ash);
+}

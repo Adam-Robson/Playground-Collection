@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link rel="stylesheet" href="../stylesheets/reset.css" />
+    <link rel="stylesheet" href="../stylesheets/rivals.css" />
+    <title>playground | rivals</title>
+  </head>
+
+  <body>
+
+    <header>
+      <a href="/" class="home">home</a>
+      <h1>rivals!</h1>
+      <h2>click on flamingo or the rivals to engage!</h2>
+      <h3>name your character and name the rivals as you create them too!</h3>
+    </header>
+
+    <main>
+      <section class="game-stats">
+
+        <div class="rivals-stats">
+          <p>You have defeated <span class="rivals-number"> 0 </span> rivals!</p>
+          <div class="rivals-defeated-list"></div>
+        </div>
+
+        <div class="player-stats">
+          <p>Player Name: <span id="player-name"></span></p>
+          <p>Player Power: <span id="player-power"> 10 </span></p>
+        </div>
+
+      </section>
+
+
+      <div class="images">
+        <img class="player-image" src="../assets/playerImage.jpg" alt="player image" />
+        <article class="rivals">
+          <div id="rivals"></div>
+        </article>
+      </div>
+
+      <div class="player-name-area">
+        <label for="player-name-input">Name your character!
+          <input type="text" id="player-name-input">
+        </label>
+        <button id="char-button">name character</button>
+      </div>
+
+      <div class="all-rivals">
+        <label for="rival-name-input">Name the next rival!
+          <input type="text" id="rival-name-input">
+        </label>
+        <button id="more-button">more rivals</button>
+      </div>
+
+    </main>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./render-utils.js"></script>
+  </body>
+
+</html>

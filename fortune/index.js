@@ -3,7 +3,7 @@ const questionBtn = document.querySelector('.question-btn');
 const showQuestion = document.getElementById('show-question');
 const answerSection = document.querySelector('.answer-section');
 const answer = document.querySelector('.answer');
-const resetSection = document.querySelector('.reset-section')
+const resetSection = document.querySelector('.reset-section');
 const resetBtn = document.getElementById('reset-btn');
 const rotateImage = document.getElementById('rotate-image');
 

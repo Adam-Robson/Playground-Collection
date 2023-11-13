@@ -9,7 +9,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Rubik', 'Titillium', san-serif;
-  background: var(--background);
+  background: #ffffff;
   display: grid;
   grid-template-areas:
     "a a a a a"
@@ -61,14 +61,23 @@ h1 {
 }
 
 .all-rivals {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
 }
 
 #more-button {
   width: fit-content;
   height: fit-content;
+}
+
+.player-name-area {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+
 }
 
 .rival {

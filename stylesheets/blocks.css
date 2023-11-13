@@ -3,6 +3,28 @@
   margin: 0;
 }
 
+html,
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-size: 0.9rem;
+  font-family: 'Inter Tight', sans-serif;
+  background-color: #d3e5e5;
+  border: 2px solid darkslategray;
+}
+
+header {
+  width: 100%;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+.home {
+  margin: 2rem 4rem;
+  text-decoration: none;
+  color: #444140;
+}
+
 canvas {
   background: #dfbaba;
   display: block;
@@ -12,9 +34,6 @@ canvas {
 a {
   color: darkslategray;
   text-decoration: none;
-  position: relative;
-  bottom: 1rem;
-  right: 1rem;
 }
 
 header {
@@ -26,7 +45,7 @@ header {
 .home {
   margin: 1rem 0 0 3rem;
   text-decoration: none;
-  color: var(#140440);
+  color: darkslategray;
 
 }
 

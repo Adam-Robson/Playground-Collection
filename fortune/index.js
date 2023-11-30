@@ -1,78 +1,70 @@
-const questionInput = document.getElementById('question');
-const questionBtn = document.querySelector('.question-btn');
+// import functions and grab DOM elements
 const showQuestion = document.getElementById('show-question');
-const answerSection = document.querySelector('.answer-section');
-const answer = document.querySelector('.answer');
-const resetSection = document.querySelector('.reset-section');
-const resetBtn = document.getElementById('reset-btn');
-const rotateImage = document.getElementById('rotate-image');
+const answer = document.getElementById('answer');
+const inputContainer = document.getElementById('input-container');
+const question = document.getElementById('question');
+const questionBtn = document.getElementById('question-btn');
+const secondQuestionContainer = document.getElementById('second-question-container');
+const secondQuestionBtn = document.getElementById('second-question-btn');
 
 const answers = [
-  'i suggest that you do not go for it! instead, look for a hobby in which you find purpose.',
-  'because i can not confirm beyond a shadow of a doubt, i will not. try again in an hour!',
-  'keep trying every 15 minutes!',
-  'i am hungry, come back in 20 minutes',
-  'who really knows?',
-  'it could come true!',
-  'i forsee it taking forever to happen. change your focus.',
-  'i dont have an answer for you!',
-  'now is not a good time, come back in 50 minutes'
+    'Your unique abilities will be recognized, leading to exciting opportunities and recognition.',
+    'Your creative talents are about to take center stage.',
+    'Trust in yourself and the universe.',
+    'The path ahead is filled with great opportunities.',
+    'Your determination and hard work will lead you to success.',
+    'In matters of the heart, I see a deep connection with someone you\'ve recently met.',
+    'Nurture this bond with care, and it has the potential to blossom into a beautiful and lasting relationship.',
+    'Keep your mind open and be prepared for unexpected turns.',
+    'A major change is on the horizon for you.',
+    'Embrace it with courage and optimism, for it will pave the way for personal growth and transformation.',
+    'Be cautious of a potential financial setback in the near future.',
+    'Take proactive steps to secure your resources and seek advice from a trusted advisor.',
+    'With careful planning, you can overcome this obstacle.',
+    'Express yourself freely and fearlessly.'
 ];
 
 questionBtn.addEventListener('click', () => {
-  const question = questionInput.value;
-  if (!question || question === undefined) {
-    questionBtn.disabled = true;
-    resetSection.classList.remove('hidden');
-    showQuestion.classList.add('error');
-    showQuestion.textContent = 'Please enter a question!';
-  } else {
-    questionBtn.disabled = true;
-    showQuestion.classList.remove('error');
-    copyQuestion();
+    if (question.value !== '' || undefined) {
+        duplicate();
+        showRandomAnswer();
+        toggleVis();
+    }
+});
+
+secondQuestionBtn.addEventListener('click', () => {
     toggleVisibility();
-    random();
-  }
 });
 
-const copyQuestion = () => {
-  const question = questionInput.value;
-  showQuestion.textContent = `Your question is: "${question}"`;
-  questionInput.value = '';
-};
-
-const toggleVisibility = () => {
-  answerSection.classList.remove('hidden');
-  resetSection.classList.remove('hidden');
-};
-
-const getRandomAnswer = (arr) => {
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  const item = arr[randomIndex];
-  return item;
-};
-
-const random = () => {
-  const randomAnswer = getRandomAnswer(answers);
-  return answer.textContent = `My answer is: "${randomAnswer}"`;
-};
-
-resetBtn.addEventListener('click', () => {
-  showQuestion.textContent = '';
-  answer.textContent = '';
-  questionInput.value = '';
-  answerSection.classList.add('hidden');
-  resetSection.classList.add('hidden');
-  questionBtn.disabled = false;
-});
-
-// rotate the image
-function rotateYAxis(degrees) {
-  rotateImage.style.transform = `rotateY(${degrees}deg)`;
+function duplicate() {
+    const ask = `you asked: ${question.value}`;
+    showQuestion.textContent = ask;
+    question.value = '';
+    secondQuestionBtn.classList.remove('hidden');
 }
 
-let currentRotation = 0;
-setInterval(() => {
-  currentRotation += 25; // rotation speed
-  rotateYAxis(currentRotation);
-}, 50);
+function showRandomAnswer() {
+    const randomAnswer = getRandomItem(answers);
+    answer.textContent = randomAnswer;
+}
+
+function getRandomItem(answers) {
+    const randomIndex = Math.floor(Math.random() * answers.length);
+    const item = answers[randomIndex];
+    return item;
+}
+
+function toggleVis() {
+    inputContainer.classList.add('hidden');
+    secondQuestionBtn.classList.remove('hidden');
+    answer.classList.remove('hidden');
+    showQuestion.classList.remove('hidden');
+}
+
+function toggleVisibility() {
+    answer.classList.add('hidden');
+    showQuestion.classList.add('hidden');
+    inputContainer.classList.remove('hidden');
+    question.textContent = '';
+    secondQuestionBtn.classList.add('hidden');
+}

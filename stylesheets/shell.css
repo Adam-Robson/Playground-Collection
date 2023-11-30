@@ -1,129 +1,160 @@
-* {
-  box-sizing: border-box;
+:root {
+  --jet: #353531;
+  --onyx: #444140;
+  --payne: #5c6b73;
+  --walnut: #726953;
+  --battle: #818479;
+  --slate: #93a29b;
+  --gray: #76777f;
+  --cobalt: #848fa4;
+  --mint: #ccfbfe;
+  --azure-web: #cedfd9;
+  --redwood: #ae5b5b;
+  --rosy-brown: #b09297;
+  --dogwood: #cdaca1;
+  --sage: #d2cda2;
+  --ash: #cfd7c7;
+  --pearl: #e6ddc7;
+  --french: #cdd6dd;
+  --cyan: #e0fbfc;
+  --timberwolf: #dad3d2;
+  --azure-web-2: #e9fcfa;
 }
 
-html,
 body {
-  max-width: 100vw;
-  max-height: 100vh;
-  font-size: 0.9rem;
-  font-family: 'Inter Tight', sans-serif;
-  background-color: #d3e5e5;
-  border: 2px solid #574655;
+  background-color: var(--azure-web);
+  color: var(--onyx);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
 }
 
 header {
-  width: 100%;
-  font-size: 1.1rem;
-  margin: 1rem;
-}
-
-main {
-  width: 50%;
-  margin: 4rem auto;
-}
-
-.home {
-  margin: 2rem 4rem;
-  text-decoration: none;
-  color: #444140;
-}
-
-h1 {
-  font-size: 3.4rem;
   text-align: center;
-  color: #ffe4c4;
-  margin: 0;
-  padding: 0;
-  text-shadow: 1px 1.5px 2.5px rgb(251, 114, 29);
+  position: sticky;
+  top: 0;
+  padding: 1em;
+  height: 8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.link {
-  position: relative;
-  right: 3rem;
-  color: #708090;
-  text-decoration: none;
-  cursor: pointer;
+.title {
+  font-size: 2.1rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 2em 0 2em 0;
 }
 
 main {
-  margin-top: 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
   padding: 1rem;
-  border: 3px solid #ffdab9;
-  background-color: #a9c1c3;
 }
 
-.cups-and-buttons {
-  padding: 1.5rem;
+a {
+  text-decoration: none;
+  color: var(--paynes);
+}
+
+a:hover {
+  color: var(--gray);
+}
+
+button {
+  border: 1px solid transparent;
+  font-size: .85em;
+  font-weight: 500;
+  background-color: var(--dogwood);
+  color: var(--jet);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  padding: 0.55rem 1rem;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  border-color: var(--jet);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+select,
+textarea {
+  width: 80%;
+  padding: 0.75rem;
+  border: 1px solid var(--jet);
+  border-radius: 0.25rem;
+  resize: vertical;
+}
+
+.control {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3.4rem;
-  background-color: #ffffff;
+  gap: 1rem;
 }
 
-.three-cups {
-  margin: 0.8rem;
+.cups {
   display: flex;
-  padding: 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 0 2rem 0;
 }
 
-.three-buttons {
+.thimbles,
+.ball {
+  margin: 0 auto;
+  height: 8rem;
+  width: 8rem;
+  margin: 0 2rem 0 2rem;
+}
+
+.count {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.count-title {
+  text-decoration: underline;
+}
+
+.new-game-buttons {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: baseline;
-  background-color: #dfc3ba;
-  color: slategray;
-}
-
-
-footer {
-  bottom: 0;
-  padding: 7px 20px;
-  font-size: .8em;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-#graycup {
-  display: flex;
-  justify-content: center;
-  top: 50%;
-  left: 50%;
-}
-
-.guesses {
-  display: flex;
-  justify-content: center;
-  color: rgb(77, 65, 87);
-  font-size: 20px;
-  margin-top: 10px;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 #reset-button {
-  margin-top: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgb(241, 207, 196);
-  color: rgb(87, 70, 85);
+  margin: 0.5rem;
 }
 
 #start-over {
-  display: block;
-  margin-top: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgb(241, 207, 196);
-  color: rgb(87, 70, 85);
+  margin: 0.5rem;
 }
 
-#gray-cup-guy::after {
-  src: url('./assets/graycupguy.png')
+.hidden {
+  display: none;
 }
 
-
-a:hover {
-  color: indianred;
+footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
 }

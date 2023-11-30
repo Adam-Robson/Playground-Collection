@@ -25,8 +25,10 @@ ___
 
 ## General Information
 
-This project was built as part of my time in the July 2022 cohort
-at Alchemy Code Lab, in Portland, Oregon.
+The projects within this collection are all games that i have built. Some of them
+were built as part of my time in the July 2022 cohort at Alchemy Code Lab, in
+Portland, Oregon, and other were built from tutorials that I found. I have tried
+to cite all sources wherever possible.
 
 ## Authors
 
@@ -41,6 +43,9 @@ This web application includes a landing page with a series of links to various g
 - JavaScript
 - HTML
 - CSS
+- React
+- Redux
+- JSX
 - ESLint
 - Prettier
 - GitHub Actions
@@ -50,6 +55,12 @@ This web application includes a landing page with a series of links to various g
 
 Thanks to Alchemy Code Lab and the global community of developers,
  whose care and generosity never ceases to amaze me.🫛🩵
+
+> Block-Breaker: [MDN](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+> Fortune Teller:  [Alchemy Code Lab](https://github.com/alchemycodelab)
+> Rivals:  [Alchemy Code Lab](https://github.com/alchemycodelab)
+> The Shell Game: [Alchemy Code Lab](https://github.com/alchemycodelab)
+> Tetris: [Mitchell Hudson](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial)
 
 ## Contact
 

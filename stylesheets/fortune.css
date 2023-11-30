@@ -3,17 +3,26 @@
 }
 
 :root {
-  --olive: hsla(60, 4%, 20%, 1);
-  --davys: hsla(60, 3%, 29%, 1);
-  --paynes: hsla(202, 17%, 42%, 1);
-  --sky: hsla(177, 33%, 79%, 1);
-  --gray: hsla(229, 4%, 48%, 1);
-  --dim: hsla(285, 2%, 39%, 1);
-  --light: hsla(220, 15%, 58%, 1);
-  --redwood: hsla(0, 34%, 52%, 1);
-  --sage: hsla(53, 35%, 73%, 1);
-  --pearl: hsla(43, 38%, 84%, 1);
-  --timberwolf: hsla(8, 10%, 84%, 1);
+  --jet: #353531;
+  --onyx: #444140;
+  --payne: #5c6b73;
+  --walnut: #726953;
+  --battle: #818479;
+  --slate: #93a29b;
+  --gray: #76777f;
+  --cobalt: #848fa4;
+  --mint: #ccfbfe;
+  --azure-web: #cedfd9;
+  --redwood: #ae5b5b;
+  --rosy-brown: #b09297;
+  --dogwood: #cdaca1;
+  --sage: #d2cda2;
+  --ash: #cfd7c7;
+  --pearl: #e6ddc7;
+  --french: #cdd6dd;
+  --cyan: #e0fbfc;
+  --timberwolf: #dad3d2;
+  --azure-web-2: #e9fcfa;
 }
 
 body {

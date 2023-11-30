@@ -29,6 +29,7 @@ body {
   grid-template-rows: auto 1fr;
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
+  font-size: 1rem;
 }
 
 header {
@@ -40,19 +41,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .title {
-  font-size: 2.1rem;
-  font-weight: 400;
-  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
   margin: 2em 0 2em 0;
 }
 
 main {
-  font-family: 'Outfit', sans-serif;
   font-weight: 300;
   padding: 1rem;
 }
@@ -151,10 +149,4 @@ textarea {
 
 .hidden {
   display: none;
-}
-
-footer {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
 }

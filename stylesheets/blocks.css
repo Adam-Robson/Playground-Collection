@@ -3,14 +3,36 @@
   margin: 0;
 }
 
+:root {
+  --jet: #353531;
+  --onyx: #444140;
+  --gray: #76777f;
+  --payne: #5c6b73;
+  --walnut: #726953;
+  --battle: #818479;
+  --slate: #93a29b;
+  --cobalt: #848fa4;
+  --redwood: #ae5b5b;
+  --rosy: #b09297;
+  --dogwood: #cdaca1;
+  --sage: #d2cda2;
+  --mint: #ccfbfe;
+  --pearl: #e6ddc7;
+  --ash: #cfd7c7;
+  --timberwolf: #dad3d2;
+  --french: #cdd6dd;
+  --cyan: #e0fbfc;
+  --azure: #e9fcfa;
+}
+
 html,
 body {
   max-width: 100vw;
   max-height: 100vh;
   font-size: 0.9rem;
   font-family: 'Inter Tight', sans-serif;
-  background-color: #d3e5e5;
-  border: 2px solid darkslategray;
+  background-color: var(--cyan);
+  color: var(--onyx);
 }
 
 header {
@@ -22,17 +44,17 @@ header {
 .home {
   margin: 2rem 4rem;
   text-decoration: none;
-  color: #444140;
+  color: var(--onyx);
 }
 
 canvas {
-  background: #dfbaba;
+  background: var(--timberwolf);
   display: block;
   margin: 0 auto;
 }
 
 a {
-  color: darkslategray;
+  color: var(--onyx);
   text-decoration: none;
 }
 
@@ -45,10 +67,10 @@ header {
 .home {
   margin: 1rem 0 0 3rem;
   text-decoration: none;
-  color: darkslategray;
+  color: var(--onyx);
 
 }
 
 a:hover {
-  color: indianred;
+  color: var(--walnut);
 }

@@ -27,7 +27,7 @@
 
 body {
   background-color: var(--timberwolf);
-  color: var(--davys);
+  color: var(--onyx);
   margin: 0 auto;
   font-family: 'Inter Tight', sans-serif;
   height: 100vh;
@@ -62,19 +62,19 @@ header img {
 
 a {
   text-decoration: none;
-  color: var(--dim);
+  color: var(--onyx);
 }
 
 a:hover {
-  color: var(--paynes)
+  color: var(--walnut)
 }
 
 button {
   border: 1px solid transparent;
   font-size: 1em;
   font-weight: 500;
-  background-color: var(--light);
-  color: var(--davys);
+  background-color: var(--ash);
+  color: var(--onyx);
   cursor: pointer;
   transition: border-color 0.25s;
   padding: 0.75rem 1.25rem;
@@ -82,7 +82,7 @@ button {
 }
 
 button:hover {
-  border-color: var(--paynes);
+  border-color: var(--onyx);
 }
 
 button:focus,
@@ -98,7 +98,7 @@ select,
 textarea {
   width: 80%;
   padding: 0.75rem;
-  border: 1px solid var(--paynes);
+  border: 1px solid var(--onyx);
   border-radius: 0.25rem;
   resize: vertical;
 }

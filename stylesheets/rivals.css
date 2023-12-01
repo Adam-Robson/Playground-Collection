@@ -1,41 +1,112 @@
 :root {
-  --background: rgb(249, 231, 231);
-  --foreground: rgb(55, 67, 88);
-  --accent: rgb(166, 65, 56);
-  --rivals: rgb(153, 232, 211);
+  --jet: #353531;
+  --onyx: #444140;
+  --payne: #5c6b73;
+  --walnut: #726953;
+  --battle: #818479;
+  --slate: #93a29b;
+  --gray: #76777f;
+  --cobalt: #848fa4;
+  --mint: #ccfbfe;
+  --azure-web: #cedfd9;
+  --redwood: #ae5b5b;
+  --rosy-brown: #b09297;
+  --dogwood: #cdaca1;
+  --sage: #d2cda2;
+  --ash: #cfd7c7;
+  --pearl: #e6ddc7;
+  --french: #cdd6dd;
+  --cyan: #e0fbfc;
+  --timberwolf: #dad3d2;
+  --azure-web-2: #e9fcfa;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  font-family: 'Rubik', 'Titillium', san-serif;
-  background: #ffffff;
+  font-family: 'Itner Tight', 'Arial', san-serif;
+  background: var(--timberwolf);
   display: grid;
   grid-template-areas:
     "a a a a a"
     "b b b b b"
     "c c d d d"
     "e e e e e";
-  color: var(--foreground);
+  color: var(--onyx);
 }
 
 header {
   grid-area: a;
+  height: 8rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  color: var(--foreground);
-
+  color: var(--onyx);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 1rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  line-height: 2;
+a {
+  text-decoration: none;
+  color: var(--onyx);
+}
+
+a:hover {
+  color: var(--walnut);
+}
+
+button {
+  border: 1px solid transparent;
+  font-size: .85em;
+  font-weight: 500;
+  background-color: var(--dogwood);
+  color: var(--jet);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  padding: 0.55rem 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem;
+}
+
+button:hover {
+  border-color: var(--jet);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+select,
+textarea {
+  width: 80%;
+  padding: 0.75rem;
+  border: 1px solid var(--jet);
+  border-radius: 0.25rem;
+  resize: vertical;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+a {
+  color: var(--onyx);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--walnut);
 }
 
 .game-stats {
-  width: 100vw;
+  width: 90vw;
+  margin: 0 auto;
   grid-area: b;
   display: grid;
   grid-template-areas:
@@ -43,58 +114,69 @@ h1 {
   grid-template-columns: 1fr 1fr;
 }
 
-.rivals-stats {
+.player-stats {
   grid-area: f;
-  text-align: center;
 }
 
-.player-stats {
+.rivals-stats {
   grid-area: g;
   text-align: center;
 }
+
+
 
 .images {
   display: grid;
   grid-template-areas:
     "a b";
+}
 
+
+.name-section {
+  display: flex;
+  justify-content: space-between;
 }
 
 .all-rivals {
-  width: 50%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
   margin: 1rem;
-}
-
-#more-button {
-  width: fit-content;
-  height: fit-content;
 }
 
 .player-name-area {
-  width: 50%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 1rem;
-
 }
 
 .rival {
-  border: 2px solid var(--accent);
-  background-color: var(--rivals);
+  border: 2px solid var(--gray);
+  background-color: var(--sage);
   display: flex;
   justify-content: space-around;
   height: 6em;
   margin: 1rem;
 }
 
-.game-over {
-  transform: rotate(90deg);
+.instructions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 4rem;
+
 }
 
-.home {
-  position: relative;
-  right: 40rem;
-  text-decoration: none;
+.tips {
+  margin-bottom: 1rem;
+  text-decoration: underline;
+
+}
+
+.game-over {
+  transform: rotate(90deg);
 }

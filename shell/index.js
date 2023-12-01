@@ -3,8 +3,6 @@ const cupOne = document.getElementById('cup-one');
 const cupTwo = document.getElementById('cup-two');
 const cupThree = document.getElementById('cup-three');
 
-const ball = document.getElementById('ball');
-
 const cupOneBtn = document.getElementById('button-one');
 const cupTwoBtn = document.getElementById('button-two');
 const cupThreeBtn = document.getElementById('button-three');

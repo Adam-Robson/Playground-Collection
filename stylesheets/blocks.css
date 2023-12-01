@@ -3,52 +3,57 @@
   margin: 0;
 }
 
+:root {
+  --onyx: #444140;
+  --walnut: #726953;
+  --timberwolf: #dad3d2;
+  --cyan: #e0fbfc;
+}
+
 html,
 body {
   max-width: 100vw;
   max-height: 100vh;
   font-size: 0.9rem;
   font-family: 'Inter Tight', sans-serif;
-  background-color: #d3e5e5;
-  border: 2px solid darkslategray;
+  background-color: var(--timberwolf);
+  color: var(--onyx);
+  font-size: 1rem;
 }
 
 header {
   width: 100%;
-  font-size: 1.1rem;
-  margin: 1rem;
+  position: sticky;
+  top: 0;
+  padding: 1em;
+  height: 8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.home {
+.title {
+  font-size: 3rem;
+}
+
+.home-link {
   margin: 2rem 4rem;
   text-decoration: none;
-  color: #444140;
+  color: var(--onyx);
 }
 
 canvas {
-  background: #dfbaba;
+  background: var(--cyan);
   display: block;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 a {
-  color: darkslategray;
+  color: var(--onyx);
   text-decoration: none;
-}
-
-header {
-  display: flex;
-  justify-content: flex-start;
-
-}
-
-.home {
-  margin: 1rem 0 0 3rem;
-  text-decoration: none;
-  color: darkslategray;
-
 }
 
 a:hover {
-  color: indianred;
+  color: var(--walnut);
 }

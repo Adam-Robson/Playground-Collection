@@ -3,147 +3,153 @@
 }
 
 :root {
-  /* CSS HSL */
-  --tint: hsla(202, 42%, 86%, 1);
-  --onyx: hsla(23, 6%, 26%, 1);
-  --cornsilk: hsla(50, 73%, 90%, 1);
-  --green: hsla(164, 11%, 41%, 1);
-  --orange: hsla(6, 57%, 47%, 1);
+  --onyx: #444140;
+  --walnut: #726953;
+  --ash: #cfd7c7;
+  --timberwolf: #dad3d2;
 }
 
-html,
 body {
-  max-width: 100vw;
-  max-height: 100vh;
-  font-size: 0.9rem;
-  font-family: 'Inter Tight', sans-serif;
-  background-color: var(--cornsilk);
+  background-color: var(--timberwolf);
   color: var(--onyx);
-  border: 2px solid var(--green);
+  margin: 0 auto;
+  font-family: 'Inter Tight', sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
 }
 
 header {
-  width: 100%;
-  font-size: 1.1rem;
-  margin: 1rem;
-}
-
-main {
-  max-width: 100vw;
-  width: 100%;
-  max-height: 100vh;
-  height: auto;
-  margin: 4rem auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrap {
-  height: 100vh;
   width: 100vw;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  height: 9.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.title {
+  font-size: 3em;
+}
+
+header img {
+  height: 100%;
 }
 
 a {
-  color: var(--onyx);
   text-decoration: none;
+  color: var(--onyx);
 }
 
 a:hover {
-  color: var(--orange);
+  color: var(--walnut)
 }
 
-.home {
-  margin: 2rem;
-  position: relative;
-  top: 4rem;
+button {
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: var(--ash);
+  color: var(--onyx);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
 }
 
-.h1 {
-  grid-area: 1 / 1 / 2 / 4;
-  font-size: 2em;
-  text-align: right;
-  padding: .5em;
-  margin-bottom: 6rem;
+button:hover {
+  border-color: var(--onyx);
 }
 
-.main {
-  grid-area: 2 / 1 / 3 / 4;
-  height: 100%;
-  width: 100%;
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-.question-input {
-  margin-top: 2em;
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+select,
+textarea {
+  width: 80%;
+  padding: 0.75rem;
+  border: 1px solid var(--onyx);
+  border-radius: 0.25rem;
+  resize: vertical;
+}
+
+.ball-section {
+  max-width: 80vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 2em;
+  justify-content: center;
 }
 
-#input {
-  margin: 2em 0 2em 0;
-}
-
-#show-question {
-  margin-top: 2em;
+.show-question {
+  max-height: 5em;
+  font-size: 1.6em;
   text-align: center;
 }
 
-.question-button {
-  width: 3em;
-  background-color: var(--green);
-  color: var(--cornsilk);
-  padding: .15rem;
+#show-question,
+#answer {
+  min-height: 4em;
+  text-align: center;
+  font-size: 1.2em;
+  max-width: 80vw;
+}
+
+.crystal {
+  height: 25em;
+  width: 25em;
+  margin: 0 auto;
+}
+
+.question {
+  margin: .5em;
+}
+
+@keyframes crystal {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .crystal {
+    animation: crystal infinite 7500ms linear;
+  }
+}
+
+label {
+  font-size: 1.3em;
+}
+
+.input-container {
+  margin-top: 1.8em;
+}
+
+#second-question-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .hidden {
-  visibility: hidden;
-}
-
-#answer-section {
-  margin-top: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--onyx);
-}
-
-#image {
-  margin-top: 2em;
-}
-
-#reset {
-  margin-left: 10em;
-  background-color: var(--green);
-  color: var(--cornsilk);
-  padding: .25rem;
-}
-
-
-.cat {
-  padding: 4rem;
-  height: 20em;
-}
-
-.error {
-  color: var(--orange);
-}
-
-#rotate-container {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  margin: 100px auto;
-}
-
-#rotate-image {
-  width: 400px;
-  height: 400px;
-  background: url('../assets/crystallball.svg') center/cover;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
+  display: none;
 }

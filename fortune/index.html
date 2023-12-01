@@ -12,36 +12,34 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
       rel="stylesheet">
-    <title>playground | fortune</title>
+    <title>playground | bad-fortune-teller</title>
   </head>
 
   <body>
-    <header class="header">
-      <a href="/" class="home">home</a>
-
+    <header>
+      <a href="/" class="home-link">home</a>
+      <div class="title">bad fortune teller</div>
     </header>
     <main>
-      <h1>bad fortune teller</h1>
-      <div class="question-section">
-        <label for="question">Enter question:
-          <input id="question" type="text" />
-        </label>
-        <button class="question-btn">ask</button>
-        <p id="show-question"></p>
-      </div>
+      <section class="ball-section">
+        <img src="../assets/crystallball.svg" alt="crystal ball" class="crystal" />
 
-      <div class="reset-section hidden">
-        <button id="reset-btn">reset</button>
-      </div>
+        <article class="input-container" id="input-container">
+          <label for="question" class="question">What is your burning question?</label>
+          <input class="question" id="question" type="text" />
+          <button class="qustion" id="question-btn">ask</button>
+        </article>
+      </section>
 
-      <div class="answer-section hidden">
-        <p class="answer"></p>
+      <section id="second-question-container">
+        <button id="second-question-btn" class="hidden">again</button>
+      </section>
 
-      </div>
+      <article id="show-question-container">
+        <p class="show-question" id="show-question"></p>
+        <p class="show-question" id="answer"></p>
+      </article>
 
-      <div id="rotate-container">
-        <div id="rotate-image"></div>
-      </div>
 
     </main>
     <script type="module" src="./index.js"></script>

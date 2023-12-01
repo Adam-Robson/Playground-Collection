@@ -1,62 +1,65 @@
-// IMPORT DOM ELS
-const buttonOne = document.getElementById('button-one');
-const buttonTwo = document.getElementById('button-two');
-const buttonThree = document.getElementById('button-three');
-const cupOneEl = document.getElementById('cup-one');
-const cupTwoEl = document.getElementById('cup-two');
-const cupThreeEl = document.getElementById('cup-three');
-const resetButtonEl = document.getElementById('reset-button');
-const startOverBtn = document.getElementById('start-over');
-let correctGuesses = document.getElementById('correct-guesses');
-let totalGuesses = document.getElementById('total-guesses');
-let incorrectGuesses = document.getElementById('incorrect-guesses');
+// import functions and grab DOM elements
+const cupOne = document.getElementById('cup-one');
+const cupTwo = document.getElementById('cup-two');
+const cupThree = document.getElementById('cup-three');
 
-// STATE
-const cupImages = [cupOneEl, cupTwoEl, cupThreeEl];
+const cupOneBtn = document.getElementById('button-one');
+const cupTwoBtn = document.getElementById('button-two');
+const cupThreeBtn = document.getElementById('button-three');
 
-let correctGuess = 0;
-let incorrectGuess = 0;
-let totalGuess = 0;
+const resetBtn = document.getElementById('reset-button');
+const correctGuesses = document.getElementById('correct-guesses');
+const incorrectGuesses = document.getElementById('incorrect-guesses');
+const totalGuesses = document.getElementById('total-guesses');
+const startOver = document.getElementById('start-over');
 
-// EVENT LISTENERS
-buttonOne.addEventListener('click', () => {
+let correct = 0;
+let incorrect = 0;
+let total = 0;
+
+resetBtn.disabled = true;
+
+const thimbles = [cupOne, cupTwo, cupThree];
+
+cupOneBtn.addEventListener('click', () => {
   handleGuess(0, getRandomItem());
 }),
 
-buttonTwo.addEventListener('click', () => {
+cupTwoBtn.addEventListener('click', () => {
   handleGuess(1, getRandomItem());
 }),
 
-buttonThree.addEventListener('click', () => {
+cupThreeBtn.addEventListener('click', () => {
   handleGuess(2, getRandomItem());
 }),
 
-resetButtonEl.addEventListener('click', () => {
-  cupOneEl.src = '../assets/graycup.png';
-  cupTwoEl.src = '../assets/graycup.png';
-  cupThreeEl.src = '../assets/graycup.png';
+resetBtn.addEventListener('click', () => {
+  cupOne.src = '../assets/thimble.png';
+  cupTwo.src = '../assets/thimble.png';
+  cupThree.src = '../assets/thimble.png';
+
   enableCupButtons();
 });
 
-startOverBtn.addEventListener('click', () => {
-  correctGuess = 0;
-  incorrectGuess = 0;
-  totalGuess = 0;
-  cupOneEl.src = '../assets/graycup.png';
-  cupTwoEl.src = '../assets/graycup.png';
-  cupThreeEl.src = '../assets/graycup.png';
+startOver.addEventListener('click', () => {
+  correct = 0;
+  incorrect = 0;
+  total = 0;
+  cupOne.src = '../assets/thimble.png';
+  cupTwo.src = '../assets/thimble.png';
+  cupThree.src = '../assets/thimble.png';
   enableCupButtons();
   correctGuesses.textContent = 0;
   incorrectGuesses.textContent = 0;
   totalGuesses.textContent = 0;
 });
 
-// FUNCTIONS
+/* functions */
 
 function resetCups() {
-  cupOneEl.src = '../assets/graycup.png';
-  cupTwoEl.src = '../assets/graycup.png';
-  cupThreeEl.src = '../assets/graycup.png';
+  cupOne.src = '../assets/thimble.png';
+  cupTwo.src = '../assets/thimble.png';
+  cupThree.src = '../assets/thimble.png';
 }
 
 function getRandomItem() {
@@ -65,36 +68,38 @@ function getRandomItem() {
 }
 
 function handleGuess(userGuess, correctSpot) {
-  // resets the style
+    // resets the style
   resetCups();
   getRandomItem();
   if (userGuess === correctSpot) {
-    correctGuess++;
-    totalGuess++;
-    correctGuesses.textContent = correctGuess;
-    totalGuesses.textContent = totalGuess;
-    incorrectGuesses.textContent = incorrectGuess;
+    correct++;
+    total++;
+    correctGuesses.textContent = correct;
+    totalGuesses.textContent = total;
+    incorrectGuesses.textContent = incorrect;
   } else {
-    incorrectGuess++;
-    totalGuess++;
-    correctGuesses.textContent = correctGuess;
-    incorrectGuesses.textContent = incorrectGuess;
-    totalGuesses.textContent = totalGuess;
+    incorrect++;
+    total++;
+    correctGuesses.textContent = correct;
+    incorrectGuesses.textContent = incorrect;
+    totalGuesses.textContent = total;
   }
-  cupImages[correctSpot].src = '../assets/graycupguy.png';
+  thimbles[correctSpot].src = '../assets/thimble_tipped.png';
   disableCupButtons();
 }
 
-
-
 function disableCupButtons() {
-  buttonOne.disabled = true;
-  buttonTwo.disabled = true;
-  buttonThree.disabled = true;
+  cupOneBtn.disabled = true;
+  cupTwoBtn.disabled = true;
+  cupThreeBtn.disabled = true;
+  resetBtn.disabled = false;
+  startOver.disabled = false;
 }
 
 function enableCupButtons() {
-  buttonOne.disabled = false;
-  buttonTwo.disabled = false;
-  buttonThree.disabled = false;
+  cupOneBtn.disabled = false;
+  cupTwoBtn.disabled = false;
+  cupThreeBtn.disabled = false;
+  resetBtn.disabled = true;
+  startOver.disabled = true;
 }

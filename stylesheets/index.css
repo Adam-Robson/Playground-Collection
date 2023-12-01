@@ -1,35 +1,142 @@
+/* Resetting some default styles for consistency across browsers */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* box sizing to border-box for more predictable layouts */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* color palette variables */
 :root {
+  --jet: #353531;
   --onyx: #444140;
+  --gray: #76777f;
   --payne: #5c6b73;
   --walnut: #726953;
   --battle: #818479;
-  --rose: #cd8987;
   --slate: #93a29b;
+  --cobalt: #848fa4;
+  --redwood: #ae5b5b;
+  --rosy: #b09297;
   --dogwood: #cdaca1;
-  --light: #b5cbb7;
+  --sage: #d2cda2;
   --mint: #ccfbfe;
+  --pearl: #e6ddc7;
   --ash: #cfd7c7;
+  --timberwolf: #dad3d2;
   --french: #cdd6dd;
   --cyan: #e0fbfc;
+  --azure: #e9fcfa;
 }
 
+/* sensible default font size and line height */
 html,
 body {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 300;
-  background-color: var(--battle);
-  color: var(--cyan);
+  font-family: 'Inter Tight', 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--french);
+  color: var(--onyx);
 }
 
-header {
-  margin: 1.4rem;
+/* spacing between block-level elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1.5em;
 }
 
+/* Container styles */
+.container {
+  width: 80%;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header,
 nav {
-  margin: 2rem 0 2rem 0;
+  margin: 1.2rem;
 }
 
-ul {
+.navlist {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -38,30 +145,160 @@ ul {
 }
 
 a {
-  color: var(--ash);
-  font-weight: 400;
+  color: var(--walnut);
+  font-weight: 300;
   text-decoration: none;
   cursor: pointer;
+  text-shadow: 0.5px 0px 3px #8f8d8d,
+    -0.5px 0px 3px #ffffff;
 }
 
 a:hover {
-  color: var(--french);
+  color: var(--slate);
   text-decoration: underline;
   cursor: pointer;
 }
 
 li {
   list-style: none;
-}
 
-.img {
-  position: relative;
-  top: 3.1rem;
-  right: 8rem;
 }
 
 .title {
-  font-size: 6.3rem;
   text-align: center;
-  color: var(--ash);
+  color: var(--onyx);
+  text-shadow: 2px 2px 4px #8f8d8d;
+  font-weight: 300;
+}
+
+.projection {
+  background-image: url('../assets/projection_reflection.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: padding-box;
+  height: 24rem;
+  width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border: double 4px var(--onyx);
+  box-shadow: 10px 10px 30px #bebebe,
+    -5px -5px 30px #ffffff;
+}
+
+
+.img2 {
+  position: relative;
+  right: 9.45rem;
+  bottom: 0.35rem
+}
+
+.comment {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* responsive styles; mobile approach */
+
+/* small screens */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 3.3rem;
+  }
+
+  li {
+    font-size: 0.8rem;
+    padding: .25rem;
+  }
+
+  .projection {
+    height: 12rem;
+    width: 20rem;
+  }
+
+  .comment {
+    font-size: 0.8rem;
+    padding: .25rem;
+  }
+}
+
+/* Medium screens (e.g., landscape tablets) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: 90%;
+    padding: 1.25rem;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  li {
+    font-size: 1.3rem;
+  }
+
+  .projection {
+    height: 17rem;
+    width: 26rem;
+    box-shadow: 20px 20px 60px #bebebe,
+      -20px -20px 60px #ffffff;
+  }
+}
+
+/* Large screens (e.g., desktops) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 1.9rem;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  li {
+    font-size: 1.5rem;
+    padding: 0.55rem;
+  }
+
+  .comment {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra-large screens (e.g., large desktops) */
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 2.5rem;
+  }
+
+  .title {
+    font-size: 6.3rem;
+  }
+
+  li {
+    font-size: 1.75rem;
+    padding: 0.75rem;
+  }
 }

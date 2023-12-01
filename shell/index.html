@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="../stylesheets/reset.css" />
     <link rel="stylesheet" href="../stylesheets/shell.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,51 +13,52 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
       rel="stylesheet">
-    <title>playground | shell</title>
+    <title>playground | the shell game</title>
   </head>
 
   <body>
     <header>
-      <a href="/" class="home">home</a>
+      <a href="/" class="home-link">home</a>
+      <div class="title">the shell game</div>
     </header>
     <main>
-      <h1>which cup is hiding something?</h1>
-      <section class="cups-and-buttons">
-        <div>
-          <img id="cup-one" class="three-cups" src="../assets/graycup.png" alt="gray cup">
+      <section class="cups">
+        <div class="control">
+          <img id="cup-one" class="thimbles" src="../assets/thimble.png" alt="cup">
           <button id="button-one" class="three-buttons">
             cup 1
           </button>
         </div>
-        <div>
-          <img id="cup-two" class="three-cups" src="../assets/graycup.png" alt="gray cup">
+        <div class="control">
+          <img id="cup-two" class="thimbles" src="../assets/thimble.png" alt="cup">
           <button id="button-two" class="three-buttons">
             cup 2
           </button>
         </div>
-        <div>
-          <img id="cup-three" class="three-cups" src="../assets/graycup.png" alt="gray cup">
+        <div class="control">
+          <img id="cup-three" class="thimbles" src="../assets/thimble.png" alt="cup">
           <button id="button-three" class="three-buttons">
             cup 3
           </button>
         </div>
       </section>
-      <section>
+      <section class="count">
+        <div class="count-title">Totals</div>
         <div class="guesses">
-          Correct guesses:<span id="correct-guesses"></span>
+          Correct:<span id="correct-guesses">0</span>
         </div>
         <div class="guesses">
-          Incorrect guesses: <span id="incorrect-guesses"></span>
+          Incorrect: <span id="incorrect-guesses">0</span>
         </div>
         <div class="guesses">
-          Total guesses:<span id="total-guesses"></span>
+          Total:<span id="total-guesses">0</span>
         </div>
+      </section>
+      <section class="new-game-buttons">
         <button id="reset-button" type="button">reset</button>
         <button id="start-over" type="button">start over</button>
       </section>
     </main>
-
-    <footer>&copy;2022 Student Developer Alchemy Code Lab</footer>
 
     <script type="module" src="./index.js"></script>
   </body>

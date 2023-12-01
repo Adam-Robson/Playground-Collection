@@ -1,30 +1,17 @@
 :root {
   --jet: #353531;
   --onyx: #444140;
-  --payne: #5c6b73;
   --walnut: #726953;
-  --battle: #818479;
-  --slate: #93a29b;
   --gray: #76777f;
-  --cobalt: #848fa4;
-  --mint: #ccfbfe;
-  --azure-web: #cedfd9;
-  --redwood: #ae5b5b;
-  --rosy-brown: #b09297;
   --dogwood: #cdaca1;
   --sage: #d2cda2;
-  --ash: #cfd7c7;
-  --pearl: #e6ddc7;
-  --french: #cdd6dd;
-  --cyan: #e0fbfc;
   --timberwolf: #dad3d2;
-  --azure-web-2: #e9fcfa;
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  font-family: 'Itner Tight', 'Arial', san-serif;
+  font-family: 'Inter Tight', 'Arial', san-serif;
   background: var(--timberwolf);
   display: grid;
   grid-template-areas:

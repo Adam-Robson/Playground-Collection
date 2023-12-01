@@ -4,25 +4,10 @@
 }
 
 :root {
-  --jet: #353531;
   --onyx: #444140;
-  --gray: #76777f;
-  --payne: #5c6b73;
   --walnut: #726953;
-  --battle: #818479;
-  --slate: #93a29b;
-  --cobalt: #848fa4;
-  --redwood: #ae5b5b;
-  --rosy: #b09297;
-  --dogwood: #cdaca1;
-  --sage: #d2cda2;
-  --mint: #ccfbfe;
-  --pearl: #e6ddc7;
-  --ash: #cfd7c7;
   --timberwolf: #dad3d2;
-  --french: #cdd6dd;
   --cyan: #e0fbfc;
-  --azure: #e9fcfa;
 }
 
 html,
@@ -31,7 +16,7 @@ body {
   max-height: 100vh;
   font-size: 0.9rem;
   font-family: 'Inter Tight', sans-serif;
-  background-color: var(--cyan);
+  background-color: var(--timberwolf);
   color: var(--onyx);
   font-size: 1rem;
 }
@@ -59,7 +44,7 @@ header {
 }
 
 canvas {
-  background: var(--timberwolf);
+  background: var(--cyan);
   display: block;
   margin: 3rem auto;
 }
